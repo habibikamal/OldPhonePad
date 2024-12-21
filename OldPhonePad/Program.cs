@@ -38,7 +38,7 @@ namespace OldPhonePad
             int numberSameKey = 1;
             for (int i = 0; i < input.Length; i++)
             {
-                var temp= input[i];
+                //var temp= input[i];
                 if (input[i]=='#')
                 {
                     break;
@@ -58,8 +58,7 @@ namespace OldPhonePad
                 {
                     numberSameKey = 1;
                 }
-                else
-                if (input[i]== input[i+1])
+                else if (input[i]== input[i+1])
                 {
                     numberSameKey++;
                 }
@@ -67,7 +66,7 @@ namespace OldPhonePad
                 {
                     //int number = int.Parse(input[i].ToString());
                     var map = mapKeys[int.Parse(input[i].ToString())];
-                    output = output + map.Substring(numberSameKey-1, 1);
+                    output +=  map.Substring(numberSameKey-1, 1);
                     numberSameKey = 1;
                 }
             }
